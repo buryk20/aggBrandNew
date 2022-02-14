@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+$font: "Open Sans", sans-serif;
+$mainColor: #3f8483;
+$colorBtn: #246566;
+$colorWhite: #ffffff;
+$backgroundColorNav: #8bbfbb;
+$backgroundColorNavBtnAct: #f7f9fa;
+$backgroundColorHov: #d8ebe9;
+$colorGrey: #9E9E9E;
+$colorRed: #aa3c3c;
+$borderRadius: 8px;
+$magButt: 16px;
+$colorBlack: #202020;
+$borderBlock: 1px solid $backgroundColorNav;
+
+$color-light-grey: #e7e7e7;
+$color-back-grey: #c4c4c4;
+
+//mixin
+
+@mixin btnDelete($selector) {
+  $that: &;
+  @at-root {
+    #{$selector} > #{$that} {
+      @content;
+    }
+  }
+}
+
+@mixin btnPlus {
+  width: 24px;
+  height: 24px;
+  background-color: $mainColor;
+  color: $colorWhite;
+  border-radius: $borderRadius;
+  position: relative;
+  cursor: pointer;
+}
+
+@mixin blockUppercase {
+  text-transform: uppercase;
+  font-size: 17px;
+}
+
+@mixin btnBrandAdd {
+  padding: 7px 17px;
+  font-size: 16px;
+  background-color: $mainColor;
+  color: $colorWhite;
+  border-radius: $borderRadius;
+  @include flexCentrJust;
+}
+
+@mixin textUpper {
+  font-size: 17px;
+  text-transform: uppercase;
+  color: $colorBlack;
+}
+
+@mixin navBtn {
+  height: 32px;
+  padding: 0 8px;
+  @include flexCentrJust;
+  border-radius: $borderRadius;
+  border-color: $backgroundColorNav;
+  font-size: 16px;
+  color: $colorWhite;
+}
+
+@mixin navBtnAct {
+  background-color: $backgroundColorNavBtnAct;
+  color: $mainColor;
+}
+
+@mixin marginCentre {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin contentGrid {
+  max-width: 1316px;
+  padding: 0 8px;
+  width: 100%;
+}
+
+@mixin magCent {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin flexSpasBit {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin flexCent {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flexCentrJust {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin dashHorizon {
+  width: 14px;
+  height: 2px;
+  position: absolute;
+  top: 11px;
+  left: 5px;
+  transition: 0.3s ease-out;
+}
+
+@mixin dashVertical {
+  width: 14px;
+  height: 2px;
+  position: absolute;
+  top: 11px;
+  left: 5px;
+  transform: rotate(90deg);
+  transition: 0.3s ease-out;
+}
+
+@mixin hasParent($selector) {
+  $that: &;
+
+  @at-root {
+    #{$selector} #{$that} {
+      @content;
+    }
+  }
+}
+
+@mixin scrollbarStyle($width: 5px) {
+  $scrollBarColor: $color-back-grey;
+
+  scrollbar-color: $scrollBarColor transparent;
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: $width;
+    height: $width;
+  }
+  &::-webkit-scrollbar-button {
+    height: 0px;
+    width: 0px;
+    background-color: transparent;
+    border-radius: 8px;
+    //display: none;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: #999;
+  }
+  &::-webkit-scrollbar-track-piece {
+    background-color: $color-light-grey;
+  }
+  &::-webkit-scrollbar-thumb {
+    height: 24px;
+    background-color: $scrollBarColor;
+    border-radius: 3px;
+  }
+  &::-webkit-scrollbar-corner {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: $scrollBarColor;
+  }
+  &::-webkit-resizer {
+    background-color: $scrollBarColor;
+  }
+}
