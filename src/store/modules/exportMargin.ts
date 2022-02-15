@@ -1,6 +1,6 @@
 import axios from "axios";
 import apiRoutes from "@/apiRoutes";
-import {ExportAll, ExportItem, MarginItem} from "@/store/models/export";
+import {ExportAll, ExportItem} from "@/store/models/export";
 
 export default {
 	state: {},

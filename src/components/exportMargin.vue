@@ -2,7 +2,7 @@
   <div class="export-margin" v-bind="$attrs">
     <div class="export-margin__unloading">
       <h2 class="export-margin__title">Выгрузки</h2>
-      <drop-down-list></drop-down-list>
+      <drop-down-list :tab="tab"></drop-down-list>
       <div class="checkbox-wrp">
         <input type="checkbox" class="custom-checkbox" id="checkbox" v-model="exportAll.active"/>
         <label class="custom-checkbox__text" for="checkbox">
@@ -55,6 +55,7 @@ export default {
   },
   computed: {
     ...mapGetters({
+      tab: 'getExportTab',
       list: 'getExportMarginList',
       exportAll: 'getExportAll'
     }),

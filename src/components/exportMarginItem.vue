@@ -14,7 +14,7 @@
       <margin-item :value="item" :parent="exportRow">
       </margin-item>
     </div>
-    <btn-plus @click="exportRow.addMargin()"></btn-plus>
+    <btn-plus v-if="exportRow.isCanAdd" @click="exportRow.addMargin()"></btn-plus>
   </div>
 </template>
 

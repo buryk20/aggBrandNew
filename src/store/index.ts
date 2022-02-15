@@ -12,9 +12,6 @@ export default createStore({
 		},
 		getMutableMarginItem: () => (item): MarginItem => item,
 
-		getExportTree: (state): ExportTreeItem[] => {
-			return state.brandData.exportList;
-		},
 		getExportTab: (state): ExportTab => {
 			return state.brandData.exportTab;
 		},

@@ -10,7 +10,7 @@
       <div class="drop-dawn-list__wrp-list-container">
         <ul class="drop-dawn-list__list">
           <tree-item
-              v-for="(item, index) of list"
+              v-for="(item, index) of tab.exportList"
               :key="index"
               :value="item"
           >
@@ -22,21 +22,21 @@
 </template>
 
 <script>
-import {mapGetters} from "vuex"
 import treeItem from "@component/treeItem";
+import {MyTab} from "@/store/models/export";
 
 export default {
   name: "dropDownList",
   components: {treeItem},
-  data() {
-    return {
+  props: {
+    tab: {
+      type: MyTab,
     }
   },
-  computed: {
-    ...mapGetters({
-      list: 'getExportTree'
-    })
+  data() {
+    return {}
   },
+  computed: {},
   methods: {},
   beforeMount() {
   }
