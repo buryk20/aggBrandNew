@@ -4,7 +4,7 @@
     <input class="margin__price" type="number"
            name="margin"
            min="0"
-           placeholder="1000"
+           placeholder=""
            v-model="mutable(value).value"
            :step="step"
     />

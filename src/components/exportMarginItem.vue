@@ -87,7 +87,7 @@ export default {
 
   &__source {
     max-width: 272px;
-    min-width: 200px;
+    min-width: 272px;
     width: 100%;
     height: 34px;
     @include flexCent;

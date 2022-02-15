@@ -1,8 +1,8 @@
 <template>
-  <div class="bnt-del" v-bind="$attrs">
+  <button class="bnt-del" v-bind="$attrs">
     <span class="bnt-del__dash-left"></span>
     <span class="bnt-del__dash-right"></span>
-  </div>
+  </button>
   <slot></slot>
 </template>
 

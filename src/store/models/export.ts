@@ -27,7 +27,7 @@ export class BrandData {
 }
 
 export class BrandList {
-	
+
 }
 
 export class ExportTab {
@@ -117,10 +117,13 @@ export class HasMargin {
 	}
 
 	addMargin(): void {
-		this.margin.push(new MarginItem({
-			value: 0,
-			type: MarginType.грн
-		}, this))
+		if(this.margin.length < 3){
+				this.margin.push(new MarginItem({
+				value: 0,
+				type: MarginType.грн
+			}, this))
+		}
+
 	}
 }
 
