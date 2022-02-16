@@ -9,7 +9,7 @@
           <p class="custom-checkbox__text-style">Выбрать все экспорты</p>
         </label>
       </div>
-      <div class="export-margin__btn-pus-wrp" :class="{isDisable: !exportAll.active}">
+      <div class="export-margin__btn-pus-wrp" >
         <margin-item v-for="(item,index) in exportAll.margin"
                      :key="index"
                      :value="item"
@@ -20,7 +20,7 @@
     </div>
     <div class="export-margin__margin">
       <h2 class="export-margin__title">Наценка</h2>
-      <div class="export-margin__container">
+      <div class="export-margin__container" >
         <export-margin-item v-for="item of list"
                             :key="item.exportId"
                             :exportRow="item">
@@ -114,4 +114,10 @@ export default {
     width: 100%;
   }
 }
+
+.isDisableTotal {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 </style>

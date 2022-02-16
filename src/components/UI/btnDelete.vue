@@ -1,5 +1,5 @@
 <template>
-  <button class="bnt-del" v-bind="$attrs">
+  <button class="bnt-del" :class="{ isDisableTotal: isDisable }" v-bind="$attrs">
     <span class="bnt-del__dash-left"></span>
     <span class="bnt-del__dash-right"></span>
   </button>

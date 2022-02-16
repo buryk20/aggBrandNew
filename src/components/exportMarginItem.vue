@@ -148,7 +148,4 @@ export default {
   background-image: url("/icon/check-mark-all-brand-icon.svg");
 }
 
-.a {
-  opacity: 0.5;
-}
 </style>

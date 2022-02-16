@@ -191,7 +191,7 @@ export default {
       position: absolute;
       height: 20px;
       top: -20px;
-      left: -1.2px;
+      left: -1px;
       background-color: $backgroundColorNav;
       @include flexCent;
     }
